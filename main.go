@@ -22,6 +22,10 @@ func main() {
 	case "write":
 		fmt.Println("starting write-stress")
 		stressWrite(endpoints, *c, *prefix, *interval)
+	case "mem":
+		stressMem(endpoints)
+	case "switch":
+		stressSwitch(endpoints)
 	}
 	select {}
 }
