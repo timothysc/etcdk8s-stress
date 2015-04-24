@@ -8,10 +8,10 @@ import (
 )
 
 func main() {
-	c := flag.Int("c", 10, "concurrent client")
+	c := flag.Int("c", 100, "concurrent client")
 	action := flag.String("action", "", "stress action")
 	prefix := flag.String("prefix", "/stress", "stress prefix")
-	endpoint := flag.String("end-points", "http://127.0.0.1:4001", "end-point string")
+	endpoint := flag.String("end-points", "http://host01-rack10:2379,http://host02-rack10:2379,http://host17-rack11:2379", "end-point string")
 	interval := flag.Duration("interval", time.Second, "write interval")
 	flag.Parse()
 
